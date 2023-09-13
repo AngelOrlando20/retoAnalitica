@@ -11,7 +11,6 @@ import numpy as np
 df1 = pd.read_csv('./avocado.csv')
 
 # Imprimir resumen de datos (primeras filas de datos)
-
 print("= DATOS: =")
 print(df1.head())
 print()
@@ -21,10 +20,10 @@ print()
 print("= Cantidad de DATOS =")
 print("Columnas: ", len(df1.axes[0]))
 print("Filas: ", len(df1.axes[1]))
+print("Total de datos: ", len(df1.axes[0]) * len(df1.axes[1]))
 print("= Tipos de datos =")
 print(list(df1.columns))
 print("")
-# ? Tipo de variable?
 
 print("= Rangos =")
 print(df1.axes[0])
