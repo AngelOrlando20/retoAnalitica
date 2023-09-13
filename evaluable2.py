@@ -44,5 +44,29 @@ print()
 print("= Promedio de precios promedios: =")
 print("Promedio: ", df1['AveragePrice'].mean())
 print("Mediana: ", df1["AveragePrice"].median())
-print("Desviación estándar: ", np.std(df1["AveragePrice"].std()))
+print("Desviación estándar: ", df1["AveragePrice"].std())
 print()
+
+# Media, mediana y desv. estándar sobre el volumen total.
+print("= Datos sobre los precios promedio: =")
+print("Promedio: ", df1["Total Volume"].mean())
+print("Mediana: ", df1["Total Volume"].median())
+print("Desviación estándar: ", df1["Total Volume"].std())
+print()
+
+# Se imprimen todas las regiones presentes en los datos.
+regions = df1['region'].unique()
+print("= Todas las regiones =")
+print(regions)
+
+max: int = df1.loc[df1['region'] == regions[0]]['Total Volume'].sum()
+region: str = ""
+for i in range(1, len(regions)):
+  a = df1.loc[df1['region'] == regions[i]]['Total Volume'].sum()
+  if (a > max):
+    max = a
+    region = regions[i]
+
+# Se imprime la región con el mayor volumen total de aguacates.
+print()
+print('Volumen mayor: ', max, ', región: ', region)
