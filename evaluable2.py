@@ -25,6 +25,10 @@ print("= Tipos de datos =")
 print(list(df1.columns))
 print("")
 
+for col in df1.columns:
+    print(f'Rango de "{col}": [{df1[col].min()}, {df1[col].max()}]')
+print()
+
 print("= Rangos =")
 print(df1.axes[0])
 print(df1.axes[1])
