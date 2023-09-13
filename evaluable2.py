@@ -1,12 +1,14 @@
 # Actividad Evaluable: Obtención de estadisticas descriptivas. 
 # Nombre: Angel Orlando Vazquez Morales
 # Matrícula: A01659000.
+# Para correr: Con la terminal cambiar de directorio al repositorio (cd retoAnalitica) 
+# y ejecutar (python evaluable2.py)
 
 import pandas as pd
 import numpy as np
 
 # CARGA DE DATOS CON PANDAS.
-df1 = pd.read_csv('avocado.csv')
+df1 = pd.read_csv('./avocado.csv')
 
 # Imprimir resumen de datos (primeras filas de datos)
 
@@ -30,7 +32,6 @@ print(df1.axes[1])
 print()
 
 # Rango de datos de precio promedio.
-
 print("= Max/Min de precio promedio: =")
 print("Minimo:", df1['AveragePrice'].min())
 print("Maximo:", df1['AveragePrice'].max())
